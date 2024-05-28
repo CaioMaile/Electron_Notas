@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anotações</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div>
 
     </div>
     <textarea placeholder="..."></textarea>
+
+    <script>
+        const texto = document.querySelector("textarea")
+        texto.addEventListener("change", function(evento){
+            localStorage.setItem("texto", evento.target.value)
+        })
+    </script>
 </body>
 </html>
